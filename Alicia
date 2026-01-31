@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Valentin</title>
+</head>
+
+<body style="background:#cfe7ff; text-align:center; font-family:Arial">
+
+  <div style="
+    background:white;
+    padding:30px;
+    width:360px;
+    margin:100px auto;
+    border-radius:15px;
+    position:relative;
+  ">
+
+    <h2 id="question">
+      Monsieur Ghislain Otsobi,<br>
+      will you be my Valentin? 💙
+    </h2>
+
+    <button onclick="yes()">Yes</button>
+
+    <button
+      id="noBtn"
+      style="position:absolute;"
+      onmouseover="moveNo()">
+      No
+    </button>
+
+    <div id="result" style="display:none;">
+      <h2>YESSS 😍</h2>
+      <p>I knew you’d say yes 😉</p>
+      <img src="https://media.giphy.com/media/l0MYt5jPR6QX5pnqM/giphy.gif" width="200">
+    </div>
+
+  </div>
+
+<script>
+function yes() {
+  document.getElementById("question").style.display = "none";
+  document.getElementById("result").style.display = "block";
+}
+
+function moveNo() {
+  const btn = document.getElementById("noBtn");
+
+  const x = Math.random() * 250;
+  const y = Math.random() * 150;
+
+  btn.style.left = x + "px";
+  btn.style.top = y + "px";
+}
+</script>
+
+</body>
+</html>
